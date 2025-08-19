@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pharma Eureka</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="98x98">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7/framework7-bundle.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#006D44">
+</head>
+<body>
+<!-- App root -->
+  <div id="app">
+    <!-- Statusbar overlay for fullscreen mode -->
+    <div class="statusbar"></div>
+
+    <!-- Main view -->
+    <div class="view view-main view-init ios-edges" data-url="/">
+      <!-- Tabbar -->
+      <div class="toolbar toolbar-bottom tabbar tabbar-labels">
+        <div class="toolbar-inner">
+          <a href="#tab-eureka" class="tab-link tab-link-active">
+            <i class="material-icons">home</i>
+            <span class="tabbar-label">Eureka</span>
+          </a>
+          <a href="#tab-production" class="tab-link">
+            <i class="material-icons">build</i>
+            <span class="tabbar-label">Production</span>
+          </a>
+          <a href="#tab-tracabilite" class="tab-link">
+            <i class="material-icons">qr_code</i>
+            <span class="tabbar-label">Traçabilité</span>
+          </a>
+          <a href="#tab-cassette" class="tab-link">
+            <i class="material-icons">archive</i>
+            <span class="tabbar-label">Cassette</span>
+          </a>
+          <a href="#tab-debug" class="tab-link">
+            <i class="material-icons">bug_report</i>
+            <span class="tabbar-label">Debug</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Pages -->
+      <div class="tabs tabs-routable">
+        <!-- Tab Eureka -->
+        <div id="tab-eureka" class="page-content tab tab-active">
+          <div class="block-title">Eureka</div>
+          <div class="block">
+            <button class="button button-fill" onclick="sendCmd('eureka_geraldine')">Eureka Géraldine</button>
+            <button class="button button-fill" onclick="sendCmd('eureka_antony')">Eureka Antony</button>
+            <button class="button button-fill" onclick="sendCmd('suivi_production')">Suivi de Production</button>
+          </div>
+        </div>
+
+        <!-- Tab Production -->
+        <div id="tab-production" class="page-content tab">
+          <div class="block-title">Production</div>
+          <div class="block">
+            <button class="button button-fill" onclick="sendCmd('produire_premier')">Premier Patient</button>
+            <button class="button button-fill" onclick="sendCmd('produire_dernier')">Dernier Patient</button>
+            <button class="button button-fill" onclick="sendCmd('verifier_fsp')">Vérifier FSP</button>
+            <button class="button button-fill" onclick="sendCmd('verifier_k7')">Vérifier K7</button>
+            <button class="button button-fill" onclick="sendCmd('envoyer_robot')">Envoyer au Robot</button>
+          </div>
+        </div>
+
+        <!-- Tab Traçabilité -->
+        <div id="tab-tracabilite" class="page-content tab">
+          <div class="block-title">Traçabilité</div>
+          <div class="block grid grid-cols-2 grid-gap">
+            <button class="button button-fill" onclick="sendCmd('piocher1')">Piocher EAN 1</button>
+            <button class="button button-fill" onclick="sendCmd('piocher2')">Piocher EAN 2</button>
+            <button class="button button-fill" onclick="sendCmd('piocher3')">Piocher EAN 3</button>
+            <button class="button button-fill" onclick="sendCmd('piocher4')">Piocher EAN 4</button>
+            <button class="button button-fill" onclick="sendCmd('piocher5')">Piocher EAN 5</button>
+            <button class="button button-fill" onclick="sendCmd('piocher6')">Piocher EAN 6</button>
+            <button class="button button-fill" onclick="sendCmd('piocher7')">Piocher EAN 7</button>
+          </div>
+        </div>
+
+        <!-- Tab Cassette -->
+        <div id="tab-cassette" class="page-content tab">
+          <div class="block-title">Cassette</div>
+          <div class="block">
+            <button class="button button-fill" onclick="sendCmd('cassette_remplie')">Cassette Remplie</button>
+            <button class="button button-fill" onclick="sendCmd('remplir_cassette')">Remplir Cassette</button>
+          </div>
+        </div>
+
+        <!-- Tab Debug -->
+        <div id="tab-debug" class="page-content tab">
+          <div class="block-title">Debug</div>
+          <div class="block">
+            <button class="button button-fill" onclick="sendCmd('position_souris')">Position Souris</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/framework7/framework7-bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

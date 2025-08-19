@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Marianne';
+  src: url('../fonts/Marianne/Marianne-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Marianne';
+  src: url('../fonts/Marianne/Marianne-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+body, input { font-family: 'Marianne', Arial, sans-serif; }
+.button { margin: 6px 0; width: 100%; }
