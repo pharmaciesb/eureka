@@ -10,7 +10,7 @@ var app = new Framework7({
 });
 
 function sendCmd(cmd) {
-  fetch(`http://PC-ROBOTIK:5000:5000/run/${cmd}`)
+  fetch(`http://PC-ROBOTIK:5000/run/${cmd}`)
     .then(res => res.json())
     .then(data => {
       app.notification.create({
